@@ -11,6 +11,8 @@
 		804D5AA9274ABB0D00EA6F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804D5AA8274ABB0D00EA6F23 /* ContentView.swift */; };
 		804D5AAB274ABB1000EA6F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804D5AAA274ABB1000EA6F23 /* Assets.xcassets */; };
 		804D5AAE274ABB1000EA6F23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804D5AAD274ABB1000EA6F23 /* Preview Assets.xcassets */; };
+		80A2A32D274C46C700EA2777 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2A32C274C46C700EA2777 /* ViewModel.swift */; };
+		80A2A330274C500B00EA2777 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2A32F274C500B00EA2777 /* Todo.swift */; };
 		80A7ADA5274B5B77003D183E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80A7ADA4274B5B77003D183E /* GoogleService-Info.plist */; };
 		80A7ADAB274B6234003D183E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 80A7ADAA274B6234003D183E /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
@@ -21,6 +23,8 @@
 		804D5AA8274ABB0D00EA6F23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		804D5AAA274ABB1000EA6F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		804D5AAD274ABB1000EA6F23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		80A2A32C274C46C700EA2777 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		80A2A32F274C500B00EA2777 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		80A7ADA4274B5B77003D183E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				804D5AA6274ABB0D00EA6F23 /* firestore_demoApp.swift */,
-				804D5AA8274ABB0D00EA6F23 /* ContentView.swift */,
+				80A2A32A274C466000EA2777 /* Views */,
+				80A2A32B274C466600EA2777 /* ViewModels */,
+				80A2A32E274C4FD900EA2777 /* Models */,
 				804D5AAA274ABB1000EA6F23 /* Assets.xcassets */,
 				80A7ADA4274B5B77003D183E /* GoogleService-Info.plist */,
 				804D5AAC274ABB1000EA6F23 /* Preview Content */,
@@ -70,6 +76,30 @@
 				804D5AAD274ABB1000EA6F23 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		80A2A32A274C466000EA2777 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				804D5AA8274ABB0D00EA6F23 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80A2A32B274C466600EA2777 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				80A2A32C274C46C700EA2777 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		80A2A32E274C4FD900EA2777 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80A2A32F274C500B00EA2777 /* Todo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				804D5AA9274ABB0D00EA6F23 /* ContentView.swift in Sources */,
+				80A2A32D274C46C700EA2777 /* ViewModel.swift in Sources */,
 				804D5AA7274ABB0D00EA6F23 /* firestore_demoApp.swift in Sources */,
+				80A2A330274C500B00EA2777 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
