@@ -11,11 +11,34 @@ struct ContentView: View {
     
     @ObservedObject var model = ViewModel()
     
+    @State var name = ""
+    @State var notes = ""
+    
     var body: some View {
         
-        List (model.list) { item in
-            Text(item.name)
+        VStack {
+        
+            List (model.list) { item in
+                Text(item.name)
+            }
+            
+            Divider()
+            
+            TextField("Name", text: $name)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            TextField("Notes", text: $notes)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            Button(action: {
+                
+                // Call add data
+                
+            }, label: {
+                Text("Add Todo Item")
+            })
         }
+            
     }
     
     init() {
