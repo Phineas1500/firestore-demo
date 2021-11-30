@@ -24,19 +24,30 @@ struct ContentView: View {
             
             Divider()
             
-            TextField("Name", text: $name)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            
-            TextField("Notes", text: $notes)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            
-            Button(action: {
+            VStack(spacing: 5) {
                 
-                // Call add data
+                TextField("Name", text: $name)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 
-            }, label: {
-                Text("Add Todo Item")
-            })
+                TextField("Notes", text: $notes)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                Button(action: {
+                    
+                    // Call add data
+                    model.addData(name: name, notes: notes)
+                    
+                    // Clear the text fields
+                    name = ""
+                    notes = ""
+                    
+                }, label: {
+                    Text("Add Todo Item")
+                })
+                
+            }
+            .padding()
+            
         }
             
     }
