@@ -4,6 +4,7 @@
 //
 //  Created by Sriram Kiron on 11/22/21.
 //
+//  Following tutorial by CodeWithChris
 
 import Foundation
 import Firebase
@@ -11,6 +12,35 @@ import Firebase
 class ViewModel: ObservableObject {
     
     @Published var list = [Todo]()
+    
+    func deleteData(todoToDelete: Todo) {
+        
+        // Get a reference to the database
+        let db = Firestore.firestore()
+        
+        //Specify the document to delete
+        db.collection("todos").document(todoToDelete.id).delete { error in
+            
+            // Check for errors
+            if error == nil {
+                // No errors
+                
+                // Update the UI from the main thread
+                DispatchQueue.main.async {
+                    
+                    // Remove the todo that was just deleted
+                    self.list.removeAll { todo in
+                        
+                        // Check for the todo to remove
+                        return todo.id == todoToDelete.id
+                    }
+                }
+                
+                
+            }
+        }
+        
+    }
     
     func addData(name: String, notes: String) {
     
