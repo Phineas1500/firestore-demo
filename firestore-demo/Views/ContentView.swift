@@ -28,10 +28,9 @@ struct ContentView: View {
                         // Delete todo
                         model.deleteData(todoToDelete: item)
                     }, label: {
-                        Image(systemName: "")
+                        Image(systemName: "minus.circle")
                     })
                 }
-                Text(item.name)
             }
             
             Divider()
