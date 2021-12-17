@@ -2,7 +2,7 @@
 //  ViewModel.swift
 //  firestore-demo
 //
-//  Created by Sriram Kiron on 11/22/21.
+//  Created on 11/22/21.
 //
 //  Following tutorial by CodeWithChris
 
